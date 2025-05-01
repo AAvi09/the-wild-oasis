@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
 
+const H1 = styled.h1`
+  font-size: 30px;
+  color: #333;
+  background-color: azure;
+`;
+const Button = styled.button`
+  background-color: purple;
+  font-size: 1.4rem;
+  padding: 1rem 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+`;
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <H1>Ram Ram saraya ne</H1>
+      <Button>Check In</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;
