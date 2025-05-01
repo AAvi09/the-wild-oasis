@@ -1,24 +1,30 @@
 import styled from "styled-components";
+import GlobalStyles from "./styles/GlobalStyles";
+import Button from "./ui/Button";
+import Input from "./ui/Input";
 
 const H1 = styled.h1`
   font-size: 30px;
   color: #333;
   background-color: azure;
 `;
-const Button = styled.button`
-  background-color: purple;
-  font-size: 1.4rem;
-  padding: 1rem 1.6rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  color: whitesmoke;
+
+const StyledApp = styled.main`
+  background-color: orangered;
+  padding: 20px;
 `;
+
 function App() {
   return (
     <div>
-      <H1>Ram Ram saraya ne</H1>
-      <Button>Check In</Button>
+      <GlobalStyles />
+      <StyledApp>
+        <H1>The Wild Oasis</H1>
+        <Button>Check In</Button>
+        <Button>Check Out</Button>
+        <Input type="number" placeholder="enter number of guests" />
+        <Input type="number" placeholder="enter number of guests" />
+      </StyledApp>
     </div>
   );
 }
