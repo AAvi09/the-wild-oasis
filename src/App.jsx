@@ -1,32 +1,35 @@
-import styled from "styled-components";
-import GlobalStyles from "./styles/GlobalStyles";
-import Button from "./ui/Button";
-import Input from "./ui/Input";
+import React from "react";
+import { BrowserRouter, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard.jsx";
+import Account from "./pages/Account.jsx";
+import Bookings from "./pages/Bookings.jsx";
+import Cabins from "./pages/Cabins.jsx";
+import Login from "./pages/Login.jsx";
+import Settings from "./pages/Settings.jsx";
+import Users from "./pages/Users.jsx";
 
-const H1 = styled.h1`
-  font-size: 30px;
-  color: #333;
-  background-color: azure;
-`;
-
-const StyledApp = styled.main`
-  background-color: orangered;
-  padding: 20px;
-`;
-
-function App() {
+import PageNotFound from "./pages/PageNotFound.jsx";
+import GlobalStyles from "./styles/GlobalStyles.jsx";
+const App = () => {
   return (
-    <div>
+    <>
       <GlobalStyles />
-      <StyledApp>
-        <H1>The Wild Oasis</H1>
-        <Button>Check In</Button>
-        <Button>Check Out</Button>
-        <Input type="number" placeholder="enter number of guests" />
-        <Input type="number" placeholder="enter number of guests" />
-      </StyledApp>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Navigate replace to="dashboard" />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="account" element={<Account />} />
+          <Route path="bookings" element={<Bookings />} />
+          <Route path="cabins" element={<Cabins />} />
+          <Route path="login" element={<Login />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="users" element={<Users />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
