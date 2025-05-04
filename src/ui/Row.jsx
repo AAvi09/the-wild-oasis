@@ -6,7 +6,7 @@ const Row = styled.div`
   ${(props) =>
     props.type === "horizontal" &&
     css`
-      justify-items: space-between;
+      justify-content: space-between;
       align-items: center;
     `}
 

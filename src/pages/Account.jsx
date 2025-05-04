@@ -6,14 +6,14 @@ function Account() {
     <>
       <Heading as="h1">Update your account</Heading>
 
-      <Row>
+      <Row style={{ display: "block" }}>
         <Heading as="h3">Update user data</Heading>
-        <p>Update user data form</p>
+        <p style={{ marginTop: "10px" }}>Update user data form</p>
       </Row>
 
-      <Row>
+      <Row style={{ display: "block" }}>
         <Heading as="h3">Update password</Heading>
-        <p>Update user password form</p>
+        <p style={{ marginTop: "10px" }}>Update user password form</p>
       </Row>
     </>
   );
