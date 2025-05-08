@@ -5,7 +5,7 @@ const StyledLogo = styled.div`
 `;
 
 const Img = styled.img`
-  height: 9.4rem;
+  height: 9.6rem;
   width: auto;
 `;
 
