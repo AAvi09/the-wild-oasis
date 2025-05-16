@@ -20,7 +20,7 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 302rem;
+  gap: 3.2rem;
 `;
 const AppLayout = () => {
   return (
